@@ -1,0 +1,447 @@
+<!--This is the code for leetcode-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leetcode</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        body{
+            background-color: gray;
+            font-family: Arial;
+        }
+        header{
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(146, 139, 139);
+            position: sticky;
+
+        }
+        .debug span{
+            background-color: rgb(173, 165, 165);
+            padding: 5px;
+            border-radius: 2px;
+            margin-right: 5px;
+        }
+        .signin span{
+            margin-right: 10px;
+
+        }
+        .btn-premium{
+            background-color:rgb(189, 145, 92);
+            color: red;
+            padding: 5px;
+        }
+        section{
+            height: 750px;
+            margin-top: 5px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 6fr 6fr;
+            
+        }
+        .pannel-left , .pannel-right{
+            background-color: white;
+            border-radius: 5px;
+            overflow: auto;
+            padding: 20px;
+        }
+        .left-pannel-header span{
+            margin-right: 10px;
+        }
+        .left-pannel-header{
+            display: flex;
+            justify-content: space-between;
+            background-color: whitesmoke;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .left-icons span{
+            background-color: rgb(193, 175, 175);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .task samp{
+            background-color: lightgray;
+            border-radius: 5px;
+            padding: 2px;
+        }
+        .left-sub-content{
+            
+            border-left: 1px solid gray;
+            padding-left: 10px;
+        }
+        .left-sub-content b{
+            font-size: 13px;
+            margin-right: 5px;
+        }
+        .bi-file-binary{
+            border-right: 1px solid gray;
+        }
+        .bi-book{
+            border-right: 1px solid gray;
+        }
+        .bi-funnel{
+            border-right: 1px solid gray;
+        }
+        .leftpannel-top-corner:hover{
+            opacity: 0.3;
+        }
+        
+        .constraints li{
+            width: 160px;
+            padding: 5px;
+            background-color: lightgray;
+            border-radius: 5px;
+        }
+        fieldset{
+            border-left: none;
+            border-right: none;
+        }
+        .option span{
+            background-color: lightgray;
+            padding: 3px;
+            border-radius: 2px;
+            line-height: 45px;
+        }
+        .accept-reject span{
+            border-right: 1px solid gray;
+            margin-right: 10px;
+        }
+        .field-1{
+            display: flex;
+            justify-content: space-between;
+            border-top: none;
+            height: 20px;
+        }
+        .discussion{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .copyright{
+            margin-top: 70px;
+        }
+        .left-pannel-footer{
+            margin-top: 50px;
+            height: 20px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .social{
+            border-left: 1px solid gray;
+            
+        }
+        .social span{
+            margin-left: 30px;
+        }
+        .like-btn span{
+            margin-right: 2px;
+            background-color: lightgray;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .message{
+            margin-right: 30px;
+            background-color: lightgray;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .bi-hand-thumbs-up{
+            border-right: 1px solid gray;
+            border-radius: 5px;
+        }
+        .social span{
+            background-color: lightgray;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .social span:hover{
+            opacity: 0.5;
+        }
+        .right-pannel-header{
+            display: flex;
+            justify-content: space-between;
+            background-color: whitesmoke;
+            padding: 5px;
+            border-radius: 5px;
+
+        }
+        .right-pannel-sub-header{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid gray;
+        }
+        .subheader-corner{
+            margin-right: 5px;
+            
+        }
+        .content{
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            height: 400px;
+            width: 300px;
+        }
+        .content-1{
+            border-left: 1px solid gray;
+            margin-right: 5px;
+        }
+        .content-2{
+
+            border-left: 1px solid gray;
+            margin-right: 5px;
+        }
+        .content-3{
+            border-left: 1px solid gray;
+            margin-right: 5px;
+        }
+        .content-right{
+            line-height: 21px;
+        }
+        .list{
+            line-height: 22px;
+        }
+        .right-lower-1{
+            display: flex;
+            justify-content: space-between;
+            background-color: whitesmoke;
+            color: rgb(96, 91, 91);
+            margin-top: 150px;
+        }
+        .right-lower-2{
+            background-color: rgb(161, 229, 229);
+            padding: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            width: 700px;
+            margin-left: 0px;
+        }
+        .right-lower-2 b{
+            color: blue;
+        }
+        .right-pannel-footer{
+            background-color: whitesmoke;
+
+        }
+        .bi-check-square{
+            color: green;
+        }
+        .right-header-symbol span{
+            color: green;
+        }
+        .icon1{
+            color: aqua;
+        }
+        .bi-file-binary{
+            color: blue;
+        }
+        .bi-book{
+            color: yellow;
+        }
+        .bi-funnel{
+            color: blue;
+        }
+        .bi-clock-history{
+            color: blue;
+        }
+        .edit{
+            color: gray;
+        }
+        .companies{
+            color: black;
+        }
+        ul{
+            color: green;
+        }
+        li span{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span>JS</span>
+            <span>30 Days of JavaScript</span>
+            <span class="bi bi-chevron-left"></span>
+            <span class="bi bi-chevron-right"></span>
+            <span class="bi bi-shuffle"></span>
+        </div>
+        <div class="debug">
+            <span class="bi bi-bug"></span>
+            <span class="bi bi-play">Run</span>
+            <span class="bi bi-cloud-arrow-up">Submit</span>
+            <span class="bi bi-file-earmark"></span>
+        </div>
+        <div class="signin">
+            <span class="bi bi-columns-gap"></span>
+            <span class="bi bi-gear">&nbsp;Register or Sign in</span>
+            <span class="btn-premium">Premium</span>
+        </div>
+    </header>
+        <section>
+            <div class="pannel-left">
+                <div class="left-pannel-header">
+                    <span class="bi bi-file-binary">&nbsp;&nbsp;<span class="edit">Description</span></span>
+                    <span class="bi bi-book">&nbsp;&nbsp;<span class="edit">Editorial</span></span>
+                    <span class="bi bi-funnel">&nbsp;&nbsp;<span class="edit">Solutions</span></span>
+                    <span class="bi bi-clock-history"><span class="edit">Submissions</span></span>
+                    <div class="leftpannel-top-corner">
+                        <span class="bi bi-fullscreen"></span>
+                        <span class="bi bi-chevron-left"></span>
+                    </div>
+                </div>
+                <div>
+                    <h1>2667. Create Hello World Function</h1>
+                    <div class="left-icons">
+                        <span class="icon1">Easy</span>
+                        <span class="bi bi-lock-fill"><span class="companies">Companies</span></span>
+                        <p class="task">Write a function <samp>createHelloWorld</samp>. It should return a new function that always returns <samp>"Hello World"</samp>.</p>
+                    </div>
+                    <div class="left-content-1">
+                        <h3>Example 1:</h3> 
+                        <p>
+                                <div class="left-sub-content">
+                                <b>Input:</b><samp>args = []</samp><br>
+                                <b>Output:</b><samp>"Hello World"</samp><br>
+                                <b>Explanation:</b><br>
+                                <samp>const f = createHelloWorld();<br>
+                                f(); // "Hello World"<br><br>
+                                </samp>
+                                <samp>The function returned by createHelloWorld should always return<br> "Hello World".</samp> 
+                                </div>                         
+                        </p>
+                    </div>
+                    <div class="left-content-2">
+                        <h3>Example 2:</h3> 
+                        <p>
+                                <div class="left-sub-content">
+                                <b>Input:</b><samp>args = [{},null,42]</samp><br>
+                                <b>Output:</b><samp>"Hello World"</samp><br>
+                                <b>Explanation:</b><br>
+                                <samp>const f = createHelloWorld();<br>
+                                f({}, null, 42); // "Hello World"<br><br>
+                                </samp>
+                                <samp>Any arguments could be passed to the function but it should still always return <br> "Hello World".</samp> 
+                                </div>                         
+                        </p>
+                    </div>
+
+                </div>
+                <div class="constraints">
+                    <h3>Constraints:</h3>
+                    <ul>
+                        <li><samp>0 <= args.length <= 10</samp></li>
+                    </ul>
+                </div>
+                <fieldset>
+                    <div>Seen this question in a real interview before? &nbsp;1/5</div>
+                    <div class="option">
+                        <span>Yes</span>
+                        <span>No</span>
+                    </div>
+                    <div class="accept-reject">
+                        <span>Accepted &nbsp;<b>565.6K&nbsp;&nbsp;</b></span>
+                        <span>Submissions &nbsp;<b>692.5K&nbsp;&nbsp;</b></span>
+                        Acceptance Rate &nbsp;<b>81.7%&nbsp;&nbsp;</b>
+                    </div>
+                </fieldset>
+                <fieldset class="field-1">
+                    <span class="bi bi-lock-fill">Companies</span>
+                    <span class="bi bi-chevron-down"></span>
+                </fieldset>
+                <div class="discussion"><span class="bi bi-messenger">&nbsp;Discussion (183)</span>
+                    <span class="bi bi-chevron-down"></span>
+                </div>
+                <div class="copyright">Copyright ©️ 2024 LeetCode All rights reserved</div>
+                <div class="left-pannel-footer">
+                    <div class="like-btn"><span class="bi bi-hand-thumbs-up">&nbsp;<b>1.4K</b>&nbsp;</span><span class="bi bi-hand-thumbs-down"></span></div>
+                    <div class="message"><span class="bi bi-chat">&nbsp;183</span></div>
+                    <div class="social"><span class="bi bi-star"></span>
+                                        <span class="bi bi-box-arrow-up-right"></span>
+                                        <span class="bi bi-question-circle"></span>
+                    </div>
+                    <div><ul>
+                            <li><span>83 Online</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pannel-right">
+                <div class="right-pannel-header">
+                    <div class="right-header-symbol"><span>&lt;/&gt;</span>Code</div>
+                    <div><span class="bi bi-fullscreen"></span>
+                        &nbsp;<span class="bi bi-chevron-up"></span></div>
+                </div>
+                <div class="right-pannel-sub-header">
+                    <div>JavaScript &nbsp;<span class="bi bi-chevron-down"></span>
+                        <span class="bi bi-lock-fill">&nbsp;Auto</span>
+                    </div>
+                    <div class="subheadeer-corner">
+                        <span class="bi bi-text-left"></span>
+                        <span class="bi bi-bookmark"></span>
+                        <span class="bi bi-braces"></span>
+                        <span class="bi bi-arrow-clockwise"></span>
+                        <span class="bi-arrows-angle-expand"></span>
+                    </div>
+                </div>
+                <div class="content">
+                   <div class="list">
+                    <ol><li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                   </div>
+                   <div class="content-right">
+                    <br>/**<br>
+                    <div class="content-1">
+                            * @return {Function}<br>
+                            */
+                    </div>
+                    <code>
+                        <var>var</var> createHelloWorld =<var> function</var>(){<br><br>
+                    <div class="content-2">
+                        &nbsp;&nbsp;return function(...args) {<br><br>
+                            &nbsp;&nbsp;}<br>
+                    </div>
+                        };<br><br>
+                    </code>
+                        /**<br>
+                    <div class="content-3">
+                            * const f = createHelloWorld();<br>
+                            * f(); // "Hello World"<br>
+                            */
+                    </div>
+                   </div>
+                </div>
+                <div class="right-lower-1">
+                    <span>Saved</span>
+                    <span>Ln14 Col4</span>
+                </div>
+                <div class="right-lower-2">
+                    You need to <b>Login/ Sign up</b> to run or submit
+                </div>
+                <div class="right-pannel-footer"><span class="bi bi-check-square"></span><b>Testcase</b>
+                    <span class="bi bi-chevron-right">_ Test Result</span>
+                </div>
+            </div>
+        </section>
+</body>
+</html>
